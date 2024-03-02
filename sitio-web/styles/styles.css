@@ -2,7 +2,6 @@
 * {
     margin: 0;
 	padding: 0;
-    margin: 0;
     box-sizing: border-box;
     scrollbar-color: transparent transparent;
     scrollbar-width: 0px;
@@ -265,15 +264,15 @@ footer .page-content{
 }
 
 .carousel input:nth-child(2):checked ~ .carousel__viewport {
-    left: -100vw;
+    left: -100%;
 }
 
 .carousel input:nth-child(3):checked ~ .carousel__viewport {
-    left: -200vw;
+    left: -200%;
 }
 
 .carousel input:nth-child(4):checked ~ .carousel__viewport {
-    left: -300vw;
+    left: -300%;
 }
 
 .carousel__slide--content input {
@@ -328,21 +327,26 @@ footer .page-content{
     margin: 0 0 0 20px;
 }
 
-#slide01 {
+#slide01, #slide04 {
     color: #fff;
     background-color: #000;
 }
 
-#slide01 h2 {
+#slide01 h2, #slide04 h2 {
     color: #ffd9c3;
 }
 
 #slide02 {
     color: #000;
-    background-color: #fbfbfb;
+    background-color: #fcfcfc;
 }
 
-#slide02 h2 {
+#slide03 {
+    color: #000;
+    background-color: #f5f5f7;
+}
+
+#slide02 h2, #slide03 h2 {
     color: #3d3d3d;
 }
 
@@ -354,6 +358,7 @@ footer .page-content{
 .carousel__slide--content p {
     margin-top: 2vh;
     font-size: 20px;
+    text-align: center;
 }
 
 .carousel__slide--button-info {
@@ -395,15 +400,35 @@ footer .page-content{
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
-        gap: 200px;
+        gap: 5%;
     }
 
     .carousel__slide img {
-        width: 50vw;
+        width: 40%;
         max-width: 1000px;
         height: auto;
         object-fit: contain;
         object-position: center;
+    }
+
+    .carousel__slide--content h2 {
+        margin-top: 0;
+        font-size: 35px;
+    }
+    
+    .carousel__slide--content p {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    .carousel__slide--button-info {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+    
+    .carousel__slide--button-buy {
+        margin-top: 60px;
+        font-size: 30px;
     }
 
     .carousel__slide--content {
@@ -440,6 +465,52 @@ footer .page-content{
         margin: 0 0 0 30px;
     }
 }
+
+@media only screen and (min-width: 1200px) {
+
+    .carousel__slide {
+        gap: 10%;
+    }
+
+    .carousel__slide img {
+        width: 50%;
+        max-width: 1000px;
+    }
+
+    .carousel__slide--content h2 {
+        margin-top: 0;
+        font-size: 45px;
+    }
+    
+    .carousel__slide--content p {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+    
+    .carousel__slide--button-info {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    
+    .carousel__slide--button-buy {
+        margin-top: 60px;
+        font-size: 35px;
+    }
+
+    .carousel__slide--content {
+        min-width: 265px;
+    }
+
+    .carousel__snapper {
+        height: 50px;
+    }
+    
+    .carousel__snapper label {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 
 .recommended-products h1 {
     padding: 20px;
