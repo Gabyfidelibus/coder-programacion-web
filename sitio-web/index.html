@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link rel="shortcut icon" href="assets/iStore-logo-icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>iStore</title>
+</head>
+<body>
+    <header>
+        <!-- CABECERA DE LA PAGINA -->
+        <div class="home-menu">
+            <!-- LOGO DE iStore CON LINK A LA PAGINA PRINCIPAL -->
+            <a href="#">
+                <img class="home-menu__logo" src="./assets/logo.png" alt="iStore logo">
+            </a>
+            <!-- LOGO DE APPLE CON LINK A LA PAGINA OFICIAL DE APPLE -->
+            <a href="https://www.apple.com">
+                <img class="home-menu__logo" src="./assets/premium-reseller-logo.png" alt="Apple premium reseller">
+            </a>
+        </div>
+        <div class="hamburger-menu">
+            <button><iconify-icon icon="octicon:three-bars-16" width="32" height="32"></iconify-icon></button>
+            <nav class="home-menu__mobile">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="./pages/productos.html">Productos</a></li>
+                    <li><a href="./pages/comparador.html">Comparador</a></li>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="home-menu__desktop">
+            <!-- BARRA DE NAVEGACION CON TODAS LAS PAGINAS -->
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/comparador.html">Comparador</a></li>
+                <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="index">
+        <!-- CONTENIDO PRINCIPAL DE LA PAGINA -->
+        <section class="carousel">
+            <!-- CARRUSEL DE PRODUCTOS PRINCIPALES -->
+            <input type="radio" name="carousel" id="btn-slide01" checked>
+            <input type="radio" name="carousel" id="btn-slide02">
+            <input type="radio" name="carousel" id="btn-slide03">
+            <input type="radio" name="carousel" id="btn-slide04">
+            <nav class="carousel__nav">
+                <label for="btn-slide01"></label>
+                <label for="btn-slide02"></label>
+                <label for="btn-slide03"></label>
+                <label for="btn-slide04"></label>
+            </nav>  
+            <ol class="carousel__viewport">
+                <li class="carousel__slide" id="slide01">
+                    <div class="carousel__slide--content">
+                        <h2>iPhone 15 PRO</h2>
+                        <p>El titanio es para los pro</p>
+                        <a class="carousel__slide--button-info" href="#">Conocé más</a>
+                        <a class="carousel__slide--button-buy" href="#">Comprar</a>
+                    </div>
+                    <img src="https://www.iphoned.nl/wp-content/uploads/2023/09/iphone-15_pro_v2.jpg" alt="iPhone 15 Pro">
+                </li>
+                <li class="carousel__slide" id="slide02">
+                    <div class="carousel__slide--content">
+                        <h2>iPhone 15</h2>
+                        <p>Da el salto</p>
+                        <a class="carousel__slide--button-info" href="#">Conocé más</a>
+                        <a class="carousel__slide--button-buy" href="#">Comprar</a>
+                    </div>
+                    <img src="https://images.macrumors.com/article-new/2022/09/f1662572972.jpg" alt="iPhone 14">
+                </li>
+                <!-- <li id="slider-product02">
+                    <img src="https://images.macrumors.com/article-new/2022/09/f1662572972.jpg" alt="iPhone 14">
+                </li>
+                <li id="slider-product03">
+                    <img src="https://outtec.com.ar/wp-content/uploads/2022/02/new-ipad-mini-vs-ipad-mini-5-hardware-specs.png" alt="iPad mini">
+                </li>
+                <li id="slider-product04">
+                    <img src="https://www.apple.com/v/ipad-pro/am/images/meta/ipad-pro_overview__glcw458o4byq_og.png" alt="iPad pro">
+                </li> -->
+            </ol>
+            <!-- MENU O BARRA DE NAVEGACION DEL CARRUSEL" -->
+            <div class="carousel__snapper">
+                <label for="btn-slide01" ></label>
+                <label for="btn-slide02" ></label>
+                <label for="btn-slide03" ></label>
+                <label for="btn-slide04" ></label>
+            </div>
+        </section>
+        <section class="recommended-products">
+            <h1>PRODUCTOS RECOMENDADOS</h1>
+            <ul>
+                <li class="recommended-products__item">
+                    <h2>iPhone 14 PRO</h2>
+                    <p>Se pasa de PRO</p>
+                    <a class="recommended-products__button--info" href="https://support.apple.com/kb/SP875?locale=es_ES" target="_blank">Conocé más</a>
+                    <a class="recommended-products__button--buy" href="https://www.mercadolibre.com.ar/apple-iphone-14-pro-128-gb-negro-espacial/p/MLA19615330">Comprar</a>
+                    <img src="./assets/productos/iphone-14-pro.png" alt="iPhone 14">
+                </li>
+                <li class="recommended-products__item">
+                    <h2>Apple Watch S8</h2>
+                    <p>Una evolucion más saludable</p>
+                    <a class="recommended-products__button--info" href="https://support.apple.com/kb/SP878?viewlocale=es_LAMR&locale=es_LAMR" target="_blank">Conocé más</a>
+                    <a class="recommended-products__button--buy" href="https://www.mercadolibre.com.ar/apple-watch-series-8-gps-caja-de-aluminio-medianoche-41-mm-correa-deportiva-medianoche-patron/p/MLA19679793">Comprar</a>
+                    <img src="./assets/productos/apple-watch.png" alt="Apple Watch S8">
+                </li>
+                <li class="recommended-products__item">
+                    <h2>MacBook Pro M2</h2>
+                    <p>Con los superpoderes del chip M2</p>
+                    <a class="recommended-products__button--info" href="https://support.apple.com/kb/SP870?locale=en_US" target="_blank">Conocé más</a>
+                    <a class="recommended-products__button--buy" href="https://www.mercadolibre.com.ar/macbook-pro-13-2022-chip-m2-apple-8gb-ram-ssd-256gb-color-gris-espacial/p/MLA24859072">Comprar</a>
+                    <img src="./assets/productos/macbook-pro-M2.png" alt="MacBook Pro M2">
+                </li>
+                <li class="recommended-products__item">
+                    <h2>iMac</h2>
+                    <p>Creada con lo mejor de Apple</p>
+                    <a class="recommended-products__button--info" href="https://support.apple.com/kb/SP896?locale=en_US&viewlocale=es_ES" target="_blank">Conocé más</a>
+                    <a class="recommended-products__button--buy" href="https://articulo.mercadolibre.com.ar/MLA-1637509978-imac-24-m1-8cpu7gpu-256gb-2021-azul-_JM">Comprar</a>
+                    <img src="./assets/productos/imac.png" alt="iMac">
+                </li>
+            </ul>
+        </section>
+        <section class="popular-products">
+            <h2>PRODUCTOS MÁS BUSCADOS</h2>
+            <div class="popular-products__carousel">
+                <ul>
+                    <li class="popular-products__item">
+                        <a href="https://www.mercadolibre.com.ar/apple-iphone-14-256-gb-blanco-estelar-distribuidor-autorizado/p/MLA1019615376?pdp_filters=category:MLA1055#searchVariation=MLA1019615376&position=2&search_layout=stack&type=product&tracking_id=5aee69f9-0a70-476b-adc4-d2f02bbe7f64" target="_blank" id="producto01">
+                            <img src="./assets/productos/iPhone_14_Blue.png" alt="iPhone 14">
+                            <p>iPhone 14</p>
+                        </a>
+                    </li>
+                    <li class="popular-products__item">
+                        <a href="https://www.mercadolibre.com.ar/apple-iphone-13-128-gb-azul-medianoche/p/MLA18500844?pdp_filters=category:MLA1055#searchVariation=MLA18500844&position=3&search_layout=stack&type=product&tracking_id=6337d194-327f-420c-835c-d56d57e00e0e" target="_blank" id="producto02">
+                            <img src="./assets/productos/iPhone_13_pro_max_gold.png" alt="iPhone 13">
+                            <p>iPhone 13</p>
+                        </a>
+                    </li>
+                    <li class="popular-products__item">
+                        <a href="https://www.mercadolibre.com.ar/apple-ipad-9-generacion-102-wi-fi-64gb-gris-espacial/p/MLA18498456?pdp_filters=category:MLA82085#searchVariation=MLA18498456&position=2&search_layout=stack&type=product&tracking_id=59bd4d46-af4a-4bd8-aa40-21ac46be00b4" target="_blank" id="producto03">
+                            <img src="./assets/productos/ipad_pro_rosegold.png" alt="iPad">
+                            <p>iPad</p>
+                        </a>
+                    </li>
+                    <li class="popular-products__item">
+                        <a href="https://www.mercadolibre.com.ar/apple-ipad-mini-6-generacion-83-wi-fi-64gb-blanco-estelar-distribuidor-autorizado/p/MLA1018499935?pdp_filters=category:MLA82085#searchVariation=MLA1018499935&position=2&search_layout=stack&type=product&tracking_id=ff197b64-e6a0-41f2-a83c-1217a22a22e8" target="_blank" id="producto04">
+                            <img src="./assets/productos/ipad_mini.png" alt="iPad mini">
+                            <p>iPad mini</p>
+                        </a>
+                    </li>
+                    <li class="popular-products__item">
+                        <a href="https://www.mercadolibre.com.ar/apple-macbook-air-13-pulgadas-2020-chip-m1-256-gb-de-ssd-8-gb-de-ram-gris-espacial-distribuidor-autorizado/p/MLA1017828518?pdp_filters=category:MLA1652#searchVariation=MLA1017828518&position=8&search_layout=stack&type=product&tracking_id=002ee7e0-0621-4b7b-a60c-251cee242ee6" target="_blank" id="producto05">
+                            <img src="https://www.qloud.ar/SITES/IMG/joy-div-computers-09-2021/236_14-10-2022-06-10-16-258968_2.jpg" alt="MacBook Air">
+                            <p>MacBook Air</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="popular-products__carousel--snapper">
+                    <a href="#popular-product04" class="prev-slide"><iconify-icon icon="ooui:next-rtl" width="32" height="32"></iconify-icon></a>
+                    <a href="#popular-product02" class="next-slide"><iconify-icon icon="ooui:next-ltr" width="32" height="32"></iconify-icon></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-networks">
+            <a target="_blank" href="https://www.instagram.com/"><iconify-icon icon="skill-icons:instagram" width="32" height="32"></iconify-icon></a>
+            <a target="_blank" href="https://twitter.com/"><iconify-icon icon="logos:twitter" width="32" height="32"></iconify-icon></a>
+            <a target="_blank" href="https://www.facebook.com/"><iconify-icon icon="logos:facebook" width="32" height="32"></iconify-icon></a>
+            <a target="_blank" href="https://ar.pinterest.com/"><iconify-icon icon="logos:pinterest" width="32" height="32"></iconify-icon></a>
+        </div>
+        <div class="page-content">
+            <a href="#">Home</a>
+            <a href="./pages/productos.html">Productos</a>
+            <a href="./pages/comparador.html">Comparador</a>
+            <a href="./pages/nosotros.html">Nosotros</a>
+            <a href="./pages/contacto.html">Contacto</a>
+        </div>
+        <p>© 2024 iStore, tienda-no oficial de Apple. All rights reserved.</p>
+    </footer>
+</body>
+</html>

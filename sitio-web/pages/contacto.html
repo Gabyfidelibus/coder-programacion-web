@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <link rel="shortcut icon" href="../assets/iStore-logo-icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://kit.fontawesome.com/1870515fb5.js" crossorigin="anonymous"></script>
+    <title>iStore - Contacto</title>
+</head>
+<body>
+    <header>
+        <!-- CABECERA DE LA PAGINA -->
+        <div class="home-menu">
+            <!-- LOGO DE iStore CON LINK A LA PAGINA PRINCIPAL -->
+            <a href="../index.html">
+                <img class="home-menu__logo" src="../assets/logo.png" alt="iStore logo">
+            </a>
+            <!-- LOGO DE APPLE CON LINK A LA PAGINA OFICIAL DE APPLE -->
+            <a href="https://www.apple.com">
+                <img class="home-menu__logo" src="../assets/premium-reseller-logo.png" alt="Apple premium reseller">
+            </a>
+        </div>
+        <div class="hamburger-menu">
+            <button><iconify-icon icon="octicon:three-bars-16" width="32" height="32"></iconify-icon></button>
+            <nav class="home-menu__mobile">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./productos.html">Productos</a></li>
+                    <li><a href="./comparador.html">Comparador</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="home-menu__desktop">
+            <!-- BARRA DE NAVEGACION CON TODAS LAS PAGINAS -->
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./comparador.html">Comparador</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contacto">
+        <!-- CONTENIDO PRINCIPAL DE LA PAGINA -->
+        <h1>CONTACTENOS</h1>
+        <aside class="info">
+            <div class="col">
+                <iconify-icon class="icono" icon="mdi:location" width="32" height="32"></iconify-icon>
+                <p>Dirección 1234, Mar del Plata, Argentina</p>
+            </div>
+            <div class="col">
+                <iconify-icon class="icono" icon="material-symbols:mail-outline" width="32" height="32"></iconify-icon></iconify-icon>
+                <p>contato.rrhh@istore.com</p>
+            </div>
+            <div class="col">
+                <iconify-icon class="icono" icon="ic:baseline-phone" width="32" height="32"></iconify-icon></iconify-icon>
+                <p>+54 9 223 5735120</p>
+            </div>
+            <div class="redes-sociales">
+                <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-instagram icono"></i></a>
+                <a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-x-twitter icono"></i></a>
+                <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f icono"></i></a>
+                <a target="_blank" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </aside>
+        <form action="" method="GET" autocomplete="off" class="formulario">
+            <!-- FORMULARIO PARA CONTACTO -->
+            <input required id="GET-name" type="text" placeholder="Nombre" name="nombre">
+            <input required id="GET-email" type="email" placeholder="Correo electrónico" name="email">
+            <input id="GET-phone" type="number" placeholder="Número telefónico" name="phone">
+            <select required id="GET-asunto" name="asunto">
+                <option disabled selected>Asunto</option>
+                <option>Otro</option>
+                <option>Devoluciones</option>
+                <option>Garantía</option>
+                <option>Métodos de pago</option>
+                <option>Problemas técnicos</option>
+                <option>Productos</option>
+            </select>
+            <textarea required id="GET-message" name="mensaje" placeholder="Mensaje"></textarea>
+            <label for="GET-files">Adjuntar archivos (.jpg, .png, .pdf)</label>
+            <input id="GET-files" type="file" accept=".jpg, .png, .pdf">
+            <div>
+                <input id="GET-newsletter" type="checkbox"> 
+                <label for="GET-newsletter">¿Desea recibir el Newsletter?</label>
+            </div>
+            <input class="send-button" type="submit" value="Enviar">
+        </form>
+    </main>
+    <footer>
+        <!-- FOOTER DE LA PAGINA CON LINKS A REDES SOCIALES, CONTENIDO DEL SITIO Y COPYRIGHT" -->
+        <div class="social-networks">
+            <a target="_blank" href="https://www.instagram.com/"><iconify-icon icon="skill-icons:instagram" width="32" height="32"></iconify-icon></a>
+            <a target="_blank" href="https://twitter.com/"><iconify-icon icon="logos:twitter" width="32" height="32"></iconify-icon></a>
+            <a target="_blank" href="https://www.facebook.com/"><iconify-icon icon="logos:facebook" width="32" height="32"></iconify-icon></a>
+            <a target="_blank" href="https://ar.pinterest.com/"><iconify-icon icon="logos:pinterest" width="32" height="32"></iconify-icon></a>
+        </div>
+        <div class="page-content">
+            <a href="../index.html">Home</a>
+            <a href="./productos.html">Productos</a>
+            <a href="./comparador.html">Comparador</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="#">Contacto</a>
+        </div>
+        <p>© 2024 iStore, tienda-no oficial de Apple. All rights reserved.</p>
+    </footer>
+</body>
+</html>
