@@ -8,6 +8,8 @@
 }
 
 html, body {
+    margin: 0;
+    padding: 0;
     line-height: 1;
     vertical-align: baseline;
     scroll-behavior: smooth;
@@ -39,6 +41,9 @@ body{
 }
 
 main {
+    margin: 0;
+    padding: 0;
+    margin-top: 56px;
     background-color: #f4f4f4;
     width: 100%;
     max-width: 3000px;
@@ -48,103 +53,75 @@ main {
 /* Estilos del encabezado */
 header{
     width: 100%;
+    height: 56px;
     max-width: 3000px;
     background-color: #dadada;
+    position: fixed;
+    margin: 0;
+}
+
+.navbar, .container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .home-menu {
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
-    margin: 5px 5%;
+    margin: 0 5%;
     margin-right: 0;
 }
 
-.home-menu__logo{
-    height: 40px;
+.home-menu img{
+    height: 45px;
     width: auto;
-    margin-right: 10px;
-}
-
-nav.home-menu__desktop, nav.home-menu__mobile {
-    display: none;
-}
-
-.hamburger-menu {
-    margin: 0.5vh 5vw;
-}
-
-.hamburger-menu button {
-    background-color: #dadada;
-    transition: color 200ms;
-}
-
-.hamburger-menu button:hover {
-    cursor: pointer;
-    color: #a124e9; 
 }
 
 .navbar-toggler{
     margin-right: 5%;
 }
 
-#navbarNavDropdown {
-    margin-left: 5%;
+#collapsibleNavbar {
+    padding-left: 5%;
+    background-color: rgba(44, 44, 44, 0.9);
 }
 
-#navbarNavDropdown a {
-    color: #000;
+#collapsibleNavbar a {
+    color: #dadada;
     font-size: 1.25rem;
     font-weight: bold;
     transition: color 200ms;
 }
 
-#navbarNavDropdown a:hover {
-    color: #a124e9;
-    text-shadow: 1px 1px 15px #ffd9c3;
+#collapsibleNavbar li {
+    padding: 10px 10px 0 0;
 }
 
-#navbarNavDropdown li {
-    padding: 10px;
+#collapsibleNavbar li:last-child {
+    padding-bottom: 10px;
 }
 
-@media only screen and (min-width: 993px)  {
-    
-    .hamburger-menu {
-        display: none;
+@media only screen and (min-width: 992px) {
+
+    #collapsibleNavbar {
+        padding-left: 5%;
+        background-color: #dadada;
     }
 
-    .home-menu__logo{
-        height: 50px;
-        width: auto;
-        margin-right: 10px;
-    }
-
-    nav.home-menu__desktop {
-        display: inline-block;
-        margin: 0.5vh 5vw;
-        width: 592px;
-    }
-
-    nav.home-menu__desktop ul {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    nav.home-menu__desktop a {
+    #collapsibleNavbar a {
         color: #000;
         font-size: 1.25rem;
         font-weight: bold;
         transition: color 200ms;
     }
-    
-    nav.home-menu__desktop a:hover {
+
+    #collapsibleNavbar a:hover {
         color: #a124e9;
         text-shadow: 1px 1px 15px #ffd9c3;
     }
 }
-
 
 /* Estilos del footer */
 
@@ -416,7 +393,7 @@ footer .page-content{
     cursor: pointer;
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 992px) {
 
     .carousel__slide {
         display: flex;
@@ -601,7 +578,7 @@ footer .page-content{
     color: #ffd9c3;
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 992px) {
 
     .recommended-products h1 {
         padding: 30px;
@@ -747,7 +724,7 @@ footer .page-content{
     }
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 992px) {
 
     .popular-products__item{
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
@@ -801,11 +778,19 @@ footer .page-content{
 main.nosotros, main.contacto {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-self: center;
     align-items: center;
     max-width: 3000px;
 }
+
+main.nosotros {
+    justify-content: start;
+}
+
+main.contacto {
+    justify-content: space-evenly;
+}
+
 
 main.nosotros h1 {
     text-align: center;
@@ -813,7 +798,7 @@ main.nosotros h1 {
     font-size: 30px;
 }
 
-main.nosotros p {
+main.nosotros article {
     width: 90%;
     margin-bottom: 25px;
     font-size: 20px;
@@ -821,49 +806,34 @@ main.nosotros p {
     text-wrap: pretty;
 }
 
-.br {
-    display: block;
-    padding: 10px;
+main.nosotros p {
+    margin-bottom: 30px;
 }
 
 @media only screen and (min-width: 577px) {
     main.nosotros h1 {
-        margin: 28px 0;
+        margin: 35px 0;
         font-size: 33px;
     }
 
-    main.nosotros p {
+    main.nosotros article {
         max-width: 1000px;
         margin-bottom: 30px;
-        font-size: 23px;
+        font-size: 25px;
     }
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 992px) {
 
     main.nosotros h1 {
-        margin: 30px 0;
-        font-size: 36px;
-    }
-
-    main.nosotros p {
-        max-width: 1000px;
-        margin-bottom: 30px;
-        font-size: 26px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-
-    main.nosotros h1 {
-        margin: 35px 0;
+        margin: 50px 0;
         font-size: 48px;
     }
 
-    main.nosotros p {
+    main.nosotros article {
         max-width: 1000px;
-        margin-bottom: 34px;
-        font-size: 28px;
+        margin-bottom: 35px;
+        font-size: 30px;
     }
 }
 
@@ -991,7 +961,7 @@ main.contacto {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 992px) {
     
     main.contacto {
         display: flex;

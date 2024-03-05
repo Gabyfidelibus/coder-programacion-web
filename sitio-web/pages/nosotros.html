@@ -12,34 +12,37 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="home-menu">
-                <a href="../index.html">
-                    <img class="home-menu__logo" src="../assets/logo.png" alt="iStore logo">
-                </a>
-                <a href="https://www.apple.com">
-                    <img class="home-menu__logo" src="../assets/premium-reseller-logo.png" alt="Apple premium reseller">
-                </a>
-            </div>
-            <button onclick="toggleMenu()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./comparador.html">Comparador</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="#">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-                </ul>
+            <div class="container-fluid">
+                <div class="home-menu">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../assets/logo.png" alt="iStore logo">
+                    </a>
+                    <a href="https://www.apple.com">
+                        <img src="../assets/premium-reseller-logo.png" alt="Apple premium reseller">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./comparador.html">Comparador</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <main class="nosotros">
         <h1>Acerca de nosotros</h1>
-        <p><b>iStore</b> es una tienda <i>no-oficial</i> de Apple que se encarga de la venta y redistribución de productos Apple en Argentina. Este negocio surgió como un proyecto en el curso de Programación Web de <i>Coderhouse</i>, al que estoy completamente agradecido y recomiendo enormemente, ya que de no haber sido por ellos, este negocio no existiría.
-        <span class="br"></span>
-        Actualmente, <b>iStore</b> solo está disponible para Argentina y no posee tiendas físicas, pero estamos planeando abrir nuestras fronteras para poder brindar nuestros servicios a todos los países del mundo, principalmente a nuestros países hermanos de habla hispana.
-        A su vez, también estamos en proceso de abrir nuestra primera tienda física en Mar del Plata, que funcionará como depósito para poder brindar una distribución a todo el país de manera más rápida y eficiente.</p>
+        <article>
+            <p><b>iStore</b> es una tienda <i>no-oficial</i> de Apple que se encarga de la venta y redistribución de productos Apple en Argentina. Este negocio surgió como un proyecto en el curso de Programación Web de <i>Coderhouse</i>, al que estoy completamente agradecido y recomiendo enormemente, ya que de no haber sido por ellos, este negocio no existiría.</p>
+            <p>Actualmente, <b>iStore</b> solo está disponible para Argentina y no posee tiendas físicas, pero estamos planeando abrir nuestras fronteras para poder brindar nuestros servicios a todos los países del mundo, principalmente a nuestros países hermanos de habla hispana.
+            A su vez, también estamos en proceso de abrir nuestra primera tienda física en Mar del Plata, que funcionará como depósito para poder brindar una distribución a todo el país de manera más rápida y eficiente.</p>
+        </article>
     </main>
     <footer>
         <!-- FOOTER DE LA PAGINA CON LINKS A REDES SOCIALES, CONTENIDO DEL SITIO Y COPYRIGHT" -->
@@ -59,6 +62,5 @@
         <p>© 2024 iStore, tienda-no oficial de Apple. All rights reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../main.js"></script>
 </body>
 </html>

@@ -12,25 +12,27 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="home-menu">
-                <a href="#">
-                    <img class="home-menu__logo" src="./assets/logo.png" alt="iStore logo">
-                </a>
-                <a href="https://www.apple.com">
-                    <img class="home-menu__logo" src="./assets/premium-reseller-logo.png" alt="Apple premium reseller">
-                </a>
-            </div>
-            <button onclick="toggleMenu()" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/comparador.html">Comparador</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
-                </ul>
+            <div class="container-fluid">
+                <div class="home-menu">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/logo.png" alt="iStore logo">
+                    </a>
+                    <a href="https://www.apple.com">
+                        <img src="./assets/premium-reseller-logo.png" alt="Apple premium reseller">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/comparador.html">Comparador</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -186,6 +188,5 @@
         <p>© 2024 iStore, tienda-no oficial de Apple. All rights reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./main.js"></script>
 </body>
 </html>
