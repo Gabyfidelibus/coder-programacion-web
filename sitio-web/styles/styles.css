@@ -105,6 +105,7 @@ header{
     padding: 10px;
 }
 
+/* barra de navegacion resoponsive */
 @media only screen and (min-width: 992px) {
 
     .navbar-nav {
@@ -144,7 +145,6 @@ header{
 
 
 /* Estilos del footer */
-
 footer {
     background-color: dimgray;
     width: 100%;
@@ -199,6 +199,7 @@ footer .page-content{
 
 /* Estilos de la pagina principal (index) */
 
+/* Carrusel */
 .carousel {
     width: 100%;
     height: 750px;
@@ -211,6 +212,7 @@ footer .page-content{
     display: none;
 }
 
+/* barra de navegacion del carrusel */
 .carousel__nav {
     position: absolute;
     width: 100%;
@@ -220,6 +222,7 @@ footer .page-content{
     gap: 10px;
 }
 
+/* botones de la barra de navegacion del carrusel */
 .carousel__nav label {
     width: 20px;
     height: 20px;
@@ -236,6 +239,7 @@ footer .page-content{
     opacity: 1;
 }
 
+/* estilo que se aplica en los botones al estar en la diapositiva correspondiente */
 .carousel input:nth-child(1):checked ~ .carousel__nav label:nth-child(1),
 .carousel input:nth-child(2):checked ~ .carousel__nav label:nth-child(2),
 .carousel input:nth-child(3):checked ~ .carousel__nav label:nth-child(3),
@@ -245,6 +249,21 @@ footer .page-content{
     width: 30px;
 }
 
+/* cambio de diapositivas de la con la barra de navegacion */
+.carousel input:nth-child(1):checked ~ .carousel__viewport {
+    left: 0;
+}
+.carousel input:nth-child(2):checked ~ .carousel__viewport {
+    left: -100%;
+}
+.carousel input:nth-child(3):checked ~ .carousel__viewport {
+    left: -200%;
+}
+.carousel input:nth-child(4):checked ~ .carousel__viewport {
+    left: -300%;
+}
+
+/* lista de diapositivas */
 .carousel__viewport {
     position: relative;
     width: 400%;
@@ -253,6 +272,7 @@ footer .page-content{
     transition: 400ms ease-in-out;
 }
 
+/* diapositivas */
 .carousel__slide {
     position: relative;
     width: 25%;
@@ -263,6 +283,57 @@ footer .page-content{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+/* navegacion del carrusel con anterior y siguiente */
+.carousel__snapper {
+    width: 100%;
+    height: 25px;
+    margin-top: -375px;
+    z-index: 3;
+}
+
+/* navegacion para cada diapositiva */
+.carousel__snapper label {
+    transition: opacity 400ms ease-in-out;
+    width: 25px;
+    height: 25px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.carousel__snapper label:hover{
+    opacity: 1;
+}
+
+/* flecha siguiente */
+#btn-slide01:checked ~ .carousel__snapper label:nth-child(2),
+#btn-slide02:checked ~ .carousel__snapper label:nth-child(3),
+#btn-slide03:checked ~ .carousel__snapper label:nth-child(4),
+#btn-slide04:checked ~ .carousel__snapper label:nth-child(1) {
+    border: solid #753595;
+    border-width: 0 3px 3px 0;
+    display: block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    float: right;
+    margin: 0 20px 0 0;
+}
+
+/* flecha anterior */
+#btn-slide01:checked ~ .carousel__snapper label:nth-last-child(1),
+#btn-slide02:checked ~ .carousel__snapper label:nth-last-child(4),
+#btn-slide03:checked ~ .carousel__snapper label:nth-last-child(3),
+#btn-slide04:checked ~ .carousel__snapper label:nth-last-child(2) {
+    border: solid #753595;
+    border-width: 0 3px 3px 0;
+    display: block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    float: left;
+    margin: 0 0 0 20px;
 }
 
 .carousel__slide img {
@@ -279,97 +350,6 @@ footer .page-content{
     flex-direction: column;
     justify-content: start;
     align-items: center;
-}
-
-.carousel input:nth-child(1):checked ~ .carousel__viewport {
-    left: 0;
-}
-
-.carousel input:nth-child(2):checked ~ .carousel__viewport {
-    left: -100%;
-}
-
-.carousel input:nth-child(3):checked ~ .carousel__viewport {
-    left: -200%;
-}
-
-.carousel input:nth-child(4):checked ~ .carousel__viewport {
-    left: -300%;
-}
-
-.carousel__slide--content input {
-    visibility: hidden;
-    display: none;
-}
-
-.carousel__snapper {
-    width: 100%;
-    height: 25px;
-    margin-top: -375px;
-    z-index: 3;
-}
-
-.carousel__snapper label {
-    transition: opacity 400ms ease-in-out;
-    width: 25px;
-    height: 25px;
-    opacity: 0.5;
-    cursor: pointer;
-}
-
-.carousel__snapper label:hover{
-    opacity: 1;
-}
-
-#btn-slide01:checked ~ .carousel__snapper label:nth-child(2),
-#btn-slide02:checked ~ .carousel__snapper label:nth-child(3),
-#btn-slide03:checked ~ .carousel__snapper label:nth-child(4),
-#btn-slide04:checked ~ .carousel__snapper label:nth-child(1) {
-    border: solid #753595;
-    border-width: 0 3px 3px 0;
-    display: block;
-    padding: 3px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    float: right;
-    margin: 0 20px 0 0;
-}
-
-#btn-slide01:checked ~ .carousel__snapper label:nth-last-child(1),
-#btn-slide02:checked ~ .carousel__snapper label:nth-last-child(4),
-#btn-slide03:checked ~ .carousel__snapper label:nth-last-child(3),
-#btn-slide04:checked ~ .carousel__snapper label:nth-last-child(2) {
-    border: solid #753595;
-    border-width: 0 3px 3px 0;
-    display: block;
-    padding: 3px;
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    float: left;
-    margin: 0 0 0 20px;
-}
-
-#slide01, #slide03 {
-    color: #fff;
-    background-color: #000;
-}
-
-#slide01 h2, #slide03 h2 {
-    color: #ffd9c3;
-}
-
-#slide02 {
-    color: #000;
-    background-color: #fcfcfc;
-}
-
-#slide04 {
-    color: #000;
-    background-color: #f5f5f7;
-}
-
-#slide02 h2, #slide04 h2 {
-    color: #3d3d3d;
 }
 
 .carousel__slide--content h2 {
@@ -416,6 +396,28 @@ footer .page-content{
     cursor: pointer;
 }
 
+#slide01, #slide03 {
+    color: #fff;
+    background-color: #000;
+}
+
+#slide01 h2, #slide03 h2 {
+    color: #ffd9c3;
+}
+
+#slide02 {
+    color: #000;
+    background-color: #fcfcfc;
+}
+
+#slide04 {
+    color: #000;
+    background-color: #f5f5f7;
+}
+
+#slide02 h2, #slide04 h2 {
+    color: #3d3d3d;
+}
 
 #slide02 .carousel__slide--button-buy, #slide04 .carousel__slide--button-buy {
     background-color: #753595;
@@ -545,7 +547,7 @@ footer .page-content{
     }
 }
 
-
+/* productos recomendados */
 .recommended-products h1 {
     padding: 20px;
     font-size: 20px;
@@ -659,6 +661,7 @@ footer .page-content{
     }
 }
 
+/* productos populares */
 .popular-products {
     display: flex;
     flex-direction: column;
@@ -812,7 +815,7 @@ footer .page-content{
     }
 }
 
-/* Estilos de la pagina "nosotros" */
+/* Estilos de la pagina "nosotros" y "contacto" */
 main.nosotros, main.contacto {
     display: flex;
     flex-direction: column;
@@ -826,8 +829,8 @@ main.nosotros {
 
 main.contacto {
     justify-content: space-evenly;
+    padding: 20px;
 }
-
 
 main.nosotros h1 {
     text-align: center;
@@ -872,10 +875,6 @@ main.nosotros p {
         margin-bottom: 35px;
         font-size: 30px;
     }
-}
-
-main.contacto {
-    padding: 20px;
 }
 
 .contacto h1 {
@@ -939,6 +938,7 @@ main.contacto {
     align-items: start;
 }
 
+/* personalizacion de los input del formulario de contacto */
 .contacto .formulario input[type="text"],
 .contacto .formulario input[type="email"],
 .contacto .formulario input[type="number"],
@@ -1032,7 +1032,7 @@ main.contacto {
 
 }
 
-/* */
+/* Estilos de la pagina de "productos" */
 
 main.productos {
     display: flex;
@@ -1154,6 +1154,7 @@ main.productos {
     }
 }
 
+/* barra de navegacion inferior entre productos */
 .pagination-container {
     width: 100%;
     display: flex;
@@ -1235,4 +1236,48 @@ main.productos {
         text-align: center;
         color: #3d3d3d;
     }
+}
+
+/* Estilos de la pagina "comparador" (no es responsive todavia) */
+main.comparador {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    max-width: 3000px;
+}
+
+main.comparador h1 {
+    font-size: 35px;
+    margin: 40px 0;
+}
+
+.comparador table {
+    width: 1200px;
+    background-color: #eeeeee;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    border: 5px solid #fff;
+}
+
+.comparador table th {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+}
+
+.comparador table th img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.comparador table td {
+    padding: 10px 20px 10px 30px;
+    text-align: start;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
 }

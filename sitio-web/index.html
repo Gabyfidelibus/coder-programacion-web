@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
-    <link rel="shortcut icon" href="assets/iStore-logo-icon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles/styles.css">
     <title>iStore</title>
+
+    <!-- ICONOS -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    
+    <!-- Icono de la pestaña -->
+    <link rel="shortcut icon" href="assets/iStore-logo-icon.svg" type="image/x-icon">
+    
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+
+    <!-- Header de la pagina que contiene la barra de navegacion -->
     <header>
+
+        <!-- Barra de navegacion responsive hecha con bootstrap -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
+                <!-- Logo de la pagina con un link al index y a la pagina de apple -->
                 <div class="home-menu">
                     <a class="navbar-brand" href="#">
                         <img src="./assets/logo.png" alt="iStore logo">
@@ -21,9 +34,13 @@
                         <img src="./assets/premium-reseller-logo.png" alt="Apple premium reseller">
                     </a>
                 </div>
+
+                <!-- Boton del menu hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Lista de las paginas del sitio con su menu desplegable -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item active"><a class="nav-link" href="#">Inicio</a></li>
@@ -36,10 +53,14 @@
             </div>
         </nav>
     </header>
+    
+    <!-- CONTENIDO PRINCIPAL DE LA PAGINA -->
     <main class="index">
-        <!-- CONTENIDO PRINCIPAL DE LA PAGINA -->
+
+        <!-- CARRUSEL DE PRODUCTOS PRINCIPALES -->
         <section class="carousel">
-            <!-- CARRUSEL DE PRODUCTOS PRINCIPALES -->
+
+            <!-- Botones inferiores del carrusel para cambiar de diapositiva respectivamente -->
             <input type="radio" name="carousel" id="btn-slide01" checked>
             <input type="radio" name="carousel" id="btn-slide02">
             <input type="radio" name="carousel" id="btn-slide03">
@@ -49,7 +70,9 @@
                 <label for="btn-slide02"></label>
                 <label for="btn-slide03"></label>
                 <label for="btn-slide04"></label>
-            </nav>  
+            </nav>
+
+            <!-- Carrusel de imagenes -->
             <ol class="carousel__viewport">
                 <li class="carousel__slide" id="slide01">
                     <div class="carousel__slide--content">
@@ -88,7 +111,8 @@
                     <img src="./assets/productos/banner3.png" alt="iPad mini">
                 </li>
             </ol>
-            <!-- MENU O BARRA DE NAVEGACION DEL CARRUSEL" -->
+
+            <!-- Flechas para ir a la diapositiva anterior y siguente -->
             <div class="carousel__snapper">
                 <label for="btn-slide01" ></label>
                 <label for="btn-slide02" ></label>
@@ -96,6 +120,8 @@
                 <label for="btn-slide04" ></label>
             </div>
         </section>
+
+        <!-- Productos recomendados -->
         <section class="recommended-products">
             <h1>PRODUCTOS RECOMENDADOS</h1>
             <ul>
@@ -129,9 +155,13 @@
                 </li>
             </ul>
         </section>
+
+        <!-- Productos populares -->
         <section class="popular-products">
             <h2>PRODUCTOS MÁS BUSCADOS</h2>
             <div class="popular-products__carousel">
+
+                <!-- lista de productos recomendados -->
                 <ul>
                     <li class="popular-products__item">
                         <a href="https://www.mercadolibre.com.ar/apple-iphone-14-256-gb-blanco-estelar-distribuidor-autorizado/p/MLA1019615376?pdp_filters=category:MLA1055#searchVariation=MLA1019615376&position=2&search_layout=stack&type=product&tracking_id=5aee69f9-0a70-476b-adc4-d2f02bbe7f64" target="_blank" id="producto01">
@@ -164,6 +194,8 @@
                         </a>
                     </li>
                 </ul>
+
+                <!-- flechas para mostrar productos siguientes y previos -->
                 <div class="popular-products__carousel--snapper">
                     <a href="#popular-product04" class="prev-slide"><iconify-icon icon="ooui:next-rtl" width="32" height="32"></iconify-icon></a>
                     <a href="#popular-product02" class="next-slide"><iconify-icon icon="ooui:next-ltr" width="32" height="32"></iconify-icon></a>
@@ -171,13 +203,19 @@
             </div>
         </section>
     </main>
+
+    <!-- footer de la pagina -->
     <footer>
+
+        <!-- redes sociales -->
         <div class="social-networks">
             <a target="_blank" href="https://www.instagram.com/"><iconify-icon icon="skill-icons:instagram" width="32" height="32"></iconify-icon></a>
             <a target="_blank" href="https://twitter.com/"><iconify-icon icon="logos:twitter" width="32" height="32"></iconify-icon></a>
             <a target="_blank" href="https://www.facebook.com/"><iconify-icon icon="logos:facebook" width="32" height="32"></iconify-icon></a>
             <a target="_blank" href="https://ar.pinterest.com/"><iconify-icon icon="logos:pinterest" width="32" height="32"></iconify-icon></a>
         </div>
+
+        <!-- contenido del sitio (index, productos, comparador, nosotros y contacto) -->
         <div class="page-content">
             <a href="#">Home</a>
             <a href="./pages/productos.html">Productos</a>
@@ -185,8 +223,12 @@
             <a href="./pages/nosotros.html">Nosotros</a>
             <a href="./pages/contacto.html">Contacto</a>
         </div>
+
+        <!-- copyright -->
         <p>© 2024 iStore, tienda-no oficial de Apple. All rights reserved.</p>
     </footer>
+
+    <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
